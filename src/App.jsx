@@ -7,6 +7,8 @@ import Facilities from "./components/Facilities";
 import Member from "./components/Member";
 import Events from "./components/Events";
 import Clubs from "./components/Clubs";
+import MemberForm from "./components/MemberForm";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
       <Member />
       <Events />
       <Clubs />
+      <MemberForm />
+      <Footer />
     </>
   );
 }
