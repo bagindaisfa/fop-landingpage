@@ -3,40 +3,42 @@ import member2 from "../assets/images/member2.png";
 
 export default function Member() {
   return (
-    <section id="member" className="relative py-20 bg-gray-50 text-gray-900">
-      <div className="container mx-auto px-8 md:px-16 lg:px-24">
-        {/* Member Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
-          {/* First content - wider (span 3 cols) */}
-          <div className="md:col-span-3 flex flex-col">
+    <section id="member" className="relative py-16 md:py-24 bg-white">
+      <div className="container mx-auto px-4 md:px-8 lg:px-16 max-w-6xl">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          {/* Left Column - Main Content */}
+          <div className="lg:col-span-8">
             <img
               src={member1}
               alt="Paradise Circle"
-              className="w-70 h-80 object-cover mb-6"
+              className="w-full h-auto object-cover mb-6"
             />
-            <h3 className="font-garamond text-3xl mb-4 text-amber-900">
+            <h3 className="font-garamond text-3xl md:text-4xl text-amber-900 mb-6 leading-tight">
               Be a Part of Paradise Circle
             </h3>
             <p className="font-dm font-bold text-black leading-relaxed">
-              MEMBER LOUNGE • FREE VALET • SPECIAL PRICE COURT • FREE ACCESS{" "}
+              MEMBER LOUNGE • FREE VALET • SPECIAL PRICE COURT • FREE ACCESS
               <br />
               RECOVERY ROOM • EXTRA DISCOUNTS AND MANY MORE
             </p>
           </div>
 
-          {/* Second content - smaller (span 2 cols) */}
-          <div className="md:col-span-2 flex flex-col items-center">
-            <img
-              src={member2}
-              alt="Join Us"
-              className="w-50 h-80 object-cover mb-6"
-            />
-            <a
-              href="#"
-              className="px-6 py-3 bg-amber-900 text-white hover:bg-white hover:text-amber-900 border border-amber-900 transition"
-            >
-              JOIN US
-            </a>
+          {/* Right Column - Join Us */}
+          <div className="lg:col-span-4 flex flex-col items-center lg:items-start lg:pl-8">
+            <div className="relative w-full mb-8 lg:mb-12">
+              <img
+                src={member2}
+                alt="Join Us"
+                className="w-full object-cover"
+                style={{ height: "450px", marginBottom: "30px" }}
+              />
+              <a
+                href="#"
+                className="bg-amber-900 text-white px-8 py-3 text-lg font-medium tracking-wider hover:bg-amber-800 transition-colors duration-300 inline-block min-w-[200px] text-center"
+              >
+                JOIN US
+              </a>
+            </div>
           </div>
         </div>
       </div>
