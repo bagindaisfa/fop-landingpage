@@ -28,7 +28,7 @@ const clubs = [
 
 const Clubs = () => {
   return (
-    <section className="bg-[#9b5c50] py-16 px-6">
+    <section id="clubs" className="bg-[#9b5c50] py-16 px-6">
       <div className="max-w-6xl mx-auto text-left mb-12">
         <h2 className="text-3xl font-serif text-white">List of Our Clubs</h2>
       </div>
