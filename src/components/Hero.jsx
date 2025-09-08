@@ -11,48 +11,6 @@ export default function Hero() {
       {/* Overlay gelap */}
       <div className="absolute inset-0 bg-black/60"></div>
 
-      {/* Navbar */}
-      <header className="absolute top-0 left-0 w-full z-20">
-        <div className="flex items-center justify-between px-8 py-4 bg-black/50">
-          {/* Logo */}
-          <div className="flex items-center gap-3">
-            <img
-              src={logoImg}
-              alt="Field of Paradise Logo"
-              className="h-20 w-auto"
-            />
-          </div>
-
-          {/* Navigation */}
-          <nav className="hidden md:flex gap-8 font-semibold tracking-wide text-white">
-            <a
-              href="#story"
-              className="hover:text-gray-300 transition-colors duration-200"
-            >
-              OUR STORY
-            </a>
-            <a
-              href="#courts"
-              className="hover:text-gray-300 transition-colors duration-200"
-            >
-              COURTS
-            </a>
-            <a
-              href="#clubs"
-              className="hover:text-gray-300 transition-colors duration-200"
-            >
-              CLUBS
-            </a>
-            <a
-              href="#events"
-              className="hover:text-gray-300 transition-colors duration-200"
-            >
-              EVENTS
-            </a>
-          </nav>
-        </div>
-      </header>
-
       {/* Hero Content (kiri tengah) */}
       <div className="relative z-10 h-full flex items-center px-8 md:px-16 lg:px-24 text-white">
         <div className="max-w-xl">
