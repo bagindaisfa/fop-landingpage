@@ -5,6 +5,7 @@ import Courts from "./components/Courts";
 import Partners from "./components/Partner";
 import Facilities from "./components/Facilities";
 import Member from "./components/Member";
+import Events from "./components/Events";
 
 function App() {
   return (
@@ -16,12 +17,7 @@ function App() {
       <Partners />
       <Facilities />
       <Member />
-      <section
-        id="clubs"
-        className="h-screen bg-gray-800 text-white flex items-center justify-center"
-      >
-        <h2 className="text-3xl">CLUBS SECTION</h2>
-      </section>
+      <Events />
     </>
   );
 }
