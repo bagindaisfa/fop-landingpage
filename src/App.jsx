@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import AboutUs from "./components/AboutUs";
@@ -9,23 +10,39 @@ import Events from "./components/Events";
 import Clubs from "./components/Clubs";
 import MemberForm from "./components/MemberForm";
 import Footer from "./components/Footer";
+import LoadingScreen from "./components/LoadingScreen";
 
 function App() {
-  return (
-    <>
-      <Navbar />
-      <Hero />
-      <AboutUs />
-      <Courts />
-      <Partners />
-      <Facilities />
-      <Member />
-      <Events />
-      <Clubs />
-      <MemberForm />
-      <Footer />
-    </>
-  );
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <LoadingScreen />;
+  } else {
+    return (
+      <>
+        <Navbar />
+        <Hero />
+        <AboutUs />
+        <Courts />
+        <Partners />
+        <Facilities />
+        <Member />
+        <Events />
+        <Clubs />
+        <MemberForm />
+        <Footer />
+      </>
+    );
+  }
 }
 
 export default App;
