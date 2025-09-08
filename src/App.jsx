@@ -6,6 +6,7 @@ import Partners from "./components/Partner";
 import Facilities from "./components/Facilities";
 import Member from "./components/Member";
 import Events from "./components/Events";
+import Clubs from "./components/Clubs";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Facilities />
       <Member />
       <Events />
+      <Clubs />
     </>
   );
 }
