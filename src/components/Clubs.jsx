@@ -6,23 +6,23 @@ const clubs = [
   {
     name: "Bogor",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "For those seeking active leisure, enjoy our state-of-the-art padel courts, where sport and lifestyle come together in a vibrant community atmosphere.",
     image: club1,
-    link: "#",
+    link: "https://maps.app.goo.gl/4VqTXWTPBrfNwGKz7",
   },
   {
     name: "Pondok Indah",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Bringing a fresh and dynamic sporting experience to this prestigious area. Here, sport meets elegance — offering the community not just a place to play, but a new lifestyle to embrace.",
     image: club2,
-    link: "#",
+    link: "https://maps.app.goo.gl/NbeQyt1nTwvmgjjA7",
   },
   {
-    name: "Bintaro",
+    name: "Bekasi",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "The first padel court experience to Grand Wisata Bekasi, introducing a new way to stay active, socialize, and enjoy a modern sporting lifestyle within this thriving community.",
     image: club3,
-    link: "#",
+    link: "https://maps.app.goo.gl/2WN1dbgBTr92SCwA9",
   },
 ];
 
@@ -56,6 +56,8 @@ const Clubs = () => {
             <a
               href={club.link}
               className="mt-4 text-xs text-white hover:text-gray-200 underline"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               VIEW LOCATION
             </a>

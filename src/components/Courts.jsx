@@ -7,20 +7,20 @@ export default function Courts() {
     {
       id: 1,
       image: court1,
-      title: "Luxury Indoor Court",
-      desc: "Experience premium indoor courts designed for comfort and performance.",
+      title: "Regular Court",
+      desc: "Court A, B & C.",
     },
     {
       id: 2,
       image: court2,
-      title: "Outdoor Paradise",
-      desc: "Enjoy world-class outdoor courts surrounded by stunning landscapes.",
+      title: "Center Court",
+      desc: "Standart Tournament Court.",
     },
     {
       id: 3,
       image: court3,
-      title: "VIP Exclusive Lounge",
-      desc: "Train and play in exclusive private courts tailored for elite members.",
+      title: "VIP Court",
+      desc: "VIP Court sets a new standard for a premium padel experience.",
     },
   ];
 

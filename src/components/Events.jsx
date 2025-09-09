@@ -7,7 +7,7 @@ export default function Events() {
     month: "OCT",
     title: "Field of Paradise Pondok Indah Trial Open",
     location: "Pondok Indah, South Jakarta",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent iaculis felis nec orci lacinia luctus. Suspendisse et blandit odio.",
+    desc: "Giving you the chance to be among the very first to enjoy the experience before the official grand opening. Come explore, try it out, and be part of this exciting beginning. Limited slots available, so make sure you don’t miss it!",
   };
 
   return (

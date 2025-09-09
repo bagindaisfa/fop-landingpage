@@ -37,13 +37,17 @@ export default function Hero() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4">
             <a
-              href="#book"
+              href="https://courtside.id/mitra?mitra_id=9f594287-e300-400c-a169-862d467ef524"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full sm:w-auto text-center px-4 sm:px-6 py-2 sm:py-3 border border-white text-sm sm:text-base text-white hover:bg-white hover:text-black transition-colors duration-200"
             >
               BOOK A COURT
             </a>
             <a
-              href="#member"
+              href="https://wa.me/6281111836928?text=Halo%20saya%20ingin%20menjadi%20member%20Field%20of%20Paradise"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full sm:w-auto text-center px-4 sm:px-6 py-2 sm:py-3 border border-white text-sm sm:text-base text-white hover:bg-white hover:text-black transition-colors duration-200"
             >
               BECOME A MEMBER
