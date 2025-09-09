@@ -16,12 +16,16 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading time
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 5000);
+    const handleLoad = () => setLoading(false);
 
-    return () => clearTimeout(timer);
+    if (document.readyState === "complete") {
+      // kalau page sudah complete sebelum effect jalan
+      setLoading(false);
+    } else {
+      window.addEventListener("load", handleLoad);
+    }
+
+    return () => window.removeEventListener("load", handleLoad);
   }, []);
 
   if (loading) {
