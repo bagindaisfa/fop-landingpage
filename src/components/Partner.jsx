@@ -1,11 +1,48 @@
-import partnerImg from "../assets/images/partner.png";
+import { useState } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import partner1 from "../assets/images/partner.png";
+import partner2 from "../assets/images/club1.png";
+import partner3 from "../assets/images/club2.png";
+
+const partners = [
+  {
+    img: partner1,
+    name: "Kopi Kalyan",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+  },
+  {
+    img: partner2,
+    name: "Partner Dua",
+    description:
+      "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.",
+  },
+  {
+    img: partner3,
+    name: "Partner Tiga",
+    description:
+      "Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.",
+  },
+];
 
 export default function Partners() {
+  const [index, setIndex] = useState(0);
+
+  const handlePrev = () => {
+    setIndex((prev) => (prev === 0 ? partners.length - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setIndex((prev) => (prev === partners.length - 1 ? 0 : prev + 1));
+  };
+
+  const current = partners[index];
+
   return (
-    <section id="partners" className="relative py-20 bg-gray-50">
+    <section id="partners" className="relative py-20 bg-[#f8f8f6]">
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         {/* Section Title */}
-        <h2 className="font-garamond italic text-4xl md:text-5xl text-amber-900 text-center mb-16">
+        <h2 className="font-garamond text-4xl md:text-5xl text-amber-900 text-center mb-16">
           Partners
         </h2>
 
@@ -14,24 +51,35 @@ export default function Partners() {
           {/* Left - Partner Image */}
           <div className="flex justify-center">
             <img
-              src={partnerImg}
-              alt="Partner"
-              className="w-[480px] h-[480px] object-contain"
+              src={current.img}
+              alt={current.name}
+              className="w-[480px] h-[480px] object-cover"
             />
           </div>
 
           {/* Right - Partner Description Box */}
-          <div className="flex justify-center md:justify-start">
-            <div className="bg-amber-900 text-white p-10 rounded-lg shadow-lg w-[480px] h-[480px] flex flex-col justify-center text-center md:text-left">
-              <h3 className="font-garamond italic text-2xl md:text-3xl mb-4">
-                Our Trusted Partner
+          <div className="flex justify-center md:justify-start w-[480px] h-[480px] relative">
+            {/* Navigation buttons */}
+            <div className="absolute -top-12 right-0 flex space-x-3">
+              <button
+                onClick={handlePrev}
+                className="w-10 h-10 flex items-center justify-center border border-amber-900 text-amber-900 rounded-full hover:bg-amber-900 hover:text-white transition"
+              >
+                <FaChevronLeft />
+              </button>
+              <button
+                onClick={handleNext}
+                className="w-10 h-10 flex items-center justify-center border border-amber-900 text-amber-900 rounded-full hover:bg-amber-900 hover:text-white transition"
+              >
+                <FaChevronRight />
+              </button>
+            </div>
+
+            <div className="bg-amber-900 text-white p-10 rounded-lg shadow-lg w-full h-full flex flex-col justify-center text-center md:text-left">
+              <h3 className="font-garamond text-2xl md:text-3xl mb-4">
+                {current.name}
               </h3>
-              <p className="font-dm leading-relaxed">
-                We are proud to collaborate with our exclusive partner, bringing
-                premium quality and excellence to Field of Paradise. Together,
-                we aim to deliver unmatched experiences for our community of
-                players and members.
-              </p>
+              <p className="font-dm leading-relaxed">{current.description}</p>
             </div>
           </div>
         </div>
