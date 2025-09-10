@@ -12,41 +12,85 @@ import MemberForm from "./components/MemberForm";
 import Footer from "./components/Footer";
 import LoadingScreen from "./components/LoadingScreen";
 
+// Import gambar utama
+import about from "./assets/images/about.png";
+import club1 from "./assets/images/club1.png";
+import club2 from "./assets/images/club2.png";
+import club3 from "./assets/images/club3.png";
+import court1 from "./assets/images/court1.png";
+import court2 from "./assets/images/court2.png";
+import court3 from "./assets/images/court3.png";
+import event1 from "./assets/images/event1.png";
+import facility1 from "./assets/images/facility1.png";
+import facility2 from "./assets/images/facility2.png";
+import facility3 from "./assets/images/facility3.png";
+import facility4 from "./assets/images/facility4.png";
+import hero from "./assets/images/hero.png";
+import logo from "./assets/images/logo.png";
+import member1 from "./assets/images/member1.png";
+import member2 from "./assets/images/member2.png";
+import partner from "./assets/images/partner.png";
+import submitMember from "./assets/images/submit-member.png";
+import titlePartner from "./assets/images/title-partner.png";
+
 function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const handleLoad = () => setLoading(false);
+    const images = [
+      about,
+      club1,
+      club2,
+      club3,
+      court1,
+      court2,
+      court3,
+      event1,
+      facility1,
+      facility2,
+      facility3,
+      facility4,
+      hero,
+      logo,
+      member1,
+      member2,
+      partner,
+      submitMember,
+      titlePartner,
+    ];
+    let loaded = 0;
 
-    if (document.readyState === "complete") {
-      // kalau page sudah complete sebelum effect jalan
-      setLoading(false);
-    } else {
-      window.addEventListener("load", handleLoad);
-    }
-
-    return () => window.removeEventListener("load", handleLoad);
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = () => {
+        loaded++;
+        if (loaded === images.length) {
+          setLoading(false);
+        }
+      };
+    });
   }, []);
 
   if (loading) {
     return <LoadingScreen />;
-  } else {
-    return (
-      <>
-        <Navbar />
-        <Hero />
-        <AboutUs />
-        <Courts />
-        <Partners />
-        <Facilities />
-        <Member />
-        <Events />
-        <Clubs />
-        <MemberForm />
-        <Footer />
-      </>
-    );
   }
+
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <AboutUs />
+      <Courts />
+      <Partners />
+      <Facilities />
+      <Member />
+      <Events />
+      <Clubs />
+      <MemberForm />
+      <Footer />
+    </>
+  );
 }
 
 export default App;
