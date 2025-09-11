@@ -49,16 +49,16 @@ export default function Partners() {
         {/* Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-items-center">
           {/* Left - Partner Image */}
-          <div className="flex justify-center">
+          <div className="w-full max-w-[480px] mx-auto h-auto min-h-[300px] md:h-[480px] relative mt-8 md:mt-0">
             <img
               src={current.img}
               alt={current.name}
-              className="w-[480px] h-[480px] object-cover"
+              className="w-full h-auto max-h-[480px] object-cover rounded-lg"
             />
           </div>
 
           {/* Right - Partner Description Box */}
-          <div className="flex justify-center md:justify-start w-[480px] h-[480px] relative">
+          <div className="w-full max-w-[480px] mx-auto h-auto min-h-[300px] md:h-[480px] relative mt-8 md:mt-0">
             {/* Navigation buttons */}
             <div className="absolute -top-12 right-0 flex space-x-3">
               <button
@@ -75,7 +75,7 @@ export default function Partners() {
               </button>
             </div>
 
-            <div className="bg-amber-900 text-white p-10 rounded-lg shadow-lg w-full h-full flex flex-col justify-center text-center md:text-left">
+            <div className="bg-amber-900 text-white p-6 md:p-10 rounded-lg shadow-lg w-full h-full flex flex-col justify-center text-center md:text-left">
               <h3 className="font-garamond text-2xl md:text-3xl mb-4">
                 {current.name}
               </h3>

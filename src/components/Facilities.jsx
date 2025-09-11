@@ -50,7 +50,7 @@ export default function Facilities() {
               <img
                 src={facility.image}
                 alt={facility.title}
-                className="w-full h-64 object-cover mb-6"
+                className="w-full h-64 object-cover mb-6 rounded-2xl"
               />
               <h3 className="font-garamond text-xl mb-3 text-amber-900">
                 {facility.title}

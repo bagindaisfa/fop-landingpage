@@ -24,18 +24,28 @@ export default function Events() {
         </div>
 
         {/* Event Row */}
-        <div className="relative grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Event Image */}
-          <div>
+          <div className="relative">
             <img
               src={eventImg}
               alt={event.title}
               className="w-full h-72 object-cover"
             />
+            
+            {/* Date Box - positioned at bottom-right of image */}
+            <div className="absolute left-[85%] top-[20%] md:right-0 md:bottom-0 md:translate-y-1/2 md:translate-x-1/2 bg-white shadow-lg p-3 md:p-6 text-center w-16 h-16 md:w-24 md:h-24 flex flex-col justify-center">
+              <div className="text-xl md:text-4xl font-bold text-amber-900 leading-none">
+                {event.date}
+              </div>
+              <div className="text-sm md:text-2xl font-semibold text-amber-900">
+                {event.month}
+              </div>
+            </div>
           </div>
 
           {/* Event Details */}
-          <div style={{ marginLeft: 30, width: 550 }}>
+          <div className="md:pl-8" style={{ maxWidth: 550 }}>
             <h2 className="font-garamond text-3xl md:text-4xl mb-4">
               {event.title}
             </h2>
@@ -51,19 +61,9 @@ export default function Events() {
                 <ArrowRight className="w-6 h-6" />
               </button>
             </div>
-          </div>
-
-          {/* Date Box - absolute center between image & text */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white shadow-lg p-6 text-center">
-            <div className="text-4xl font-bold text-amber-900 leading-none">
-              {event.date}
-            </div>
-            <div className="text-2xl font-semibold text-amber-900">
-              {event.month}
-            </div>
-          </div>
         </div>
       </div>
+    </div>
     </section>
   );
 }
