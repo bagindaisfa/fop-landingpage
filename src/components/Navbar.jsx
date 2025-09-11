@@ -36,7 +36,7 @@ export default function Navbar() {
             <img
               src={logoImg}
               alt="Field of Paradise Logo"
-              className="h-10 w-auto md:h-12"
+              className="h-12 w-auto md:h-16 lg:h-20 transition-all duration-300"
             />
           </div>
 
