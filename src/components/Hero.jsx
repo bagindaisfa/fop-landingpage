@@ -1,6 +1,17 @@
+import React from "react";
 import heroImg from "../assets/images/hero.png";
 
 export default function Hero() {
+  const encodedMessage = encodeURIComponent(
+    "Halo saya ingin menjadi member Field of Paradise"
+  );
+
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  const url = isMobile
+    ? `https://wa.me/6281111836928?text=${encodedMessage}`
+    : `https://web.whatsapp.com/send?phone=6281111836928&text=${encodedMessage}`;
+
   return (
     <section
       id="story"
@@ -19,13 +30,13 @@ export default function Hero() {
             </h1>
             <div className="space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg">
               <p>
-                Field of Paradise fosters a premium luxury, social atmosphere where
-                players of all levels connect, compete and grow together.
+                Field of Paradise fosters a premium luxury, social atmosphere
+                where players of all levels connect, compete and grow together.
               </p>
               <p>
                 Beyond the game, Field of Paradise is a destination – a
-                sophisticated yet welcoming space where sport, wellness, and social
-                life come together seamlessly.
+                sophisticated yet welcoming space where sport, wellness, and
+                social life come together seamlessly.
               </p>
             </div>
           </div>
@@ -45,7 +56,7 @@ export default function Hero() {
               BOOK A COURT
             </a>
             <a
-              href="https://wa.me/6281111836928?text=Halo%20saya%20ingin%20menjadi%20member%20Field%20of%20Paradise"
+              href={url}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto text-center px-4 sm:px-6 py-2 sm:py-3 border border-white text-sm sm:text-base text-white hover:bg-white hover:text-black transition-colors duration-200"

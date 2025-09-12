@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import partner1 from "../assets/images/partner.png";
-import partner2 from "../assets/images/club1.png";
-import partner3 from "../assets/images/club2.png";
+import partner2 from "../assets/images/CAMANI_LogoWord_500x.webp";
+import partner5 from "../assets/images/PBC by LBC.png"
 
 const partners = [
   {
@@ -13,13 +13,13 @@ const partners = [
   },
   {
     img: partner2,
-    name: "Partner Dua",
+    name: "Camani",
     description:
       "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.",
   },
   {
-    img: partner3,
-    name: "Partner Tiga",
+    img: partner5,
+    name: "Paradise Brunch Club",
     description:
       "Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.",
   },
@@ -53,7 +53,7 @@ export default function Partners() {
             <img
               src={current.img}
               alt={current.name}
-              className="w-full h-auto max-h-[480px] object-cover rounded-lg"
+              className="w-full h-auto min-h-[480px] max-h-[480px] object-cover rounded-lg"
             />
           </div>
 
