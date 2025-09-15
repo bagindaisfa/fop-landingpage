@@ -32,6 +32,8 @@ import member2 from "./assets/images/member2.png";
 import partner from "./assets/images/partner.png";
 import submitMember from "./assets/images/submit-member.png";
 import titlePartner from "./assets/images/title-partner.png";
+import CAMANI_LogoWord_500x from "./assets/images/CAMANI_LogoWord_500x.webp";
+import PBC_by_LBC from "./assets/images/PBC by LBC.png";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -57,6 +59,8 @@ function App() {
       partner,
       submitMember,
       titlePartner,
+      CAMANI_LogoWord_500x,
+      PBC_by_LBC,
     ];
     let loaded = 0;
 
